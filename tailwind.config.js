@@ -12,8 +12,20 @@ module.exports = {
         inter: ['Inter', 'sans-serif'],
       },
       colors: {
-        'primary-orange': '#FF5722',
-      }
+        'primary-orange': {
+          DEFAULT: '#FF5722',  // Default shade
+          '50': '#FFE9E0',
+          '100': '#FFC6B3',
+          '200': '#FF9573',
+          '300': '#FF6A42',
+          '400': '#FF3F20',  // Slightly darker
+          '500': '#E64A19',  // Darker shade
+          '600': '#D84315',
+          '700': '#BF360C',
+          '800': '#A82B09',
+          '900': '#8D2207',
+        },
+      },
     },
   },
   plugins: [],
