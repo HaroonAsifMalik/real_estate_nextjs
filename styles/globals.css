@@ -33,6 +33,16 @@
 }
 
 
+.hero_image
+{
+  
+
+  background-image: url('/assets/images/hero.png');
+  background-size: cover; /* Ensure the image covers the container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+
+}
 
 .main:before {
   background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
@@ -90,10 +100,9 @@
 /* Tailwind Styles */
 
 .app {
-  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+  @apply relative z-10  justify-center items-center flex-col  ;
 }
 
-/* "              " */
 
 .home_btn {
   @apply rounded-lg block select-none 
@@ -116,6 +125,50 @@
   
   @apply hover:bg-primary-orange-500 hover:text-white hover:border-primary-orange-500;
 }
+
+/* .get-in-touch-container {
+  background-color: white;
+  padding: 2rem;
+}
+
+.contact-details {
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  background-color: #0F4C75;
+  padding: 2rem;
+  color: white;
+}
+
+.contact-form h2 {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: transparent;
+  border: 1px solid #cccccc;
+  color: white;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+}
+
+.contact-form button {
+  background-color: white;
+  color: #0F4C75;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #f0f0f0;
+} */
+
 
 
 .head_text {

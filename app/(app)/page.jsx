@@ -1,21 +1,24 @@
-// import Feed from "@components/feed"
+import Home from '@components/Home'
+import About from '@components/About'
+import Gallery from '@components/Gallery'
+import Inventory from '@components/Inventory'
+import GetInTouch from '@components/GetInTouch'
+import Amenities from '@components/Amenities'
 
-const Home = () => {
+
+
+const Main = () => {
     return (
-        <section className=" w-full flex-col flex-center">
-            <h1 className="head_text text-center">
-                Discove & share
-                <br className="mx:md-hidden" />
-                <span className="orange_gradient text-center">
-                    AI Powerd Prompt
-                </span>
-            </h1>
-            <p className="decs text-center"> Promptopia is an open-source AI prompting tool for modern world to
-                discover, create and share creative prompts</p>
-
-            {/* <Feed /> */}
-        </section>
+        <>
+            <Home />
+            <About />
+            <Gallery />
+            <Inventory/>
+            <GetInTouch/>
+           
+      <Amenities />
+    
+        </>
     )
 }
-
-export default Home
+export default Main;
