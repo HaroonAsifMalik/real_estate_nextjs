@@ -24,7 +24,7 @@ const Nav = () => {
     };
 
     return (
-        <nav className="flex items-center justify-between w-full mb-16 pt-3 px-4 sm:px-6 lg:px-8">
+        <nav className="flex items-center justify-between w-full  py-5 px-4 sm:px-6 lg:px-8 sticky top-0 bg-primary-orange-50 z-20 bg-transparent ">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
                 <Image
@@ -39,9 +39,9 @@ const Nav = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden sm:flex flex-grow justify-center space-x-4">
-                <Link href="/Home" className="home_btn">HOME</Link>
-                <Link href="/About" className="home_btn">ABOUT</Link>
-                <Link href="/gallery" className="home_btn">GALLERY</Link>
+                <Link href="/#Home" className="home_btn">HOME</Link>
+                <Link href="/#About" className="home_btn">ABOUT</Link>
+                <Link href="/#Gallery" className="home_btn">GALLERY</Link>
                 <Link href="/amentities" className="home_btn">AMENITIES</Link>
                 <Link href="/inventory" className="home_btn">INVENTORY</Link>
                 <Link href="/contact" className="home_btn">CONTACT</Link>

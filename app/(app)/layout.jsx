@@ -1,7 +1,7 @@
 import '@styles/globals.css'
-// import Provide from '@components/Provide'
 import Nav from '@components/Nav'
 
+import Footer from '@components/Footer'
 export const metadata = {
     title: "Promtopia",
     description: "Promtopia is a platform for creating and sharing promposals"
@@ -17,7 +17,7 @@ const RootLayout = ({ children }) => {
                 <main className='app'>
                     <Nav />
                     {children}
-                    
+                    <Footer/>
                 </main>
             </body>
         </html>
