@@ -39,12 +39,12 @@ const Nav = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden sm:flex flex-grow justify-center space-x-4">
-                <Link href="/Home" className="black_btn">HOME</Link>
-                <Link href="/About" className="black_btn">ABOUT</Link>
-                <Link href="/gallery" className="black_btn">GALLERY</Link>
-                <Link href="/amentities" className="black_btn">AMENITIES</Link>
-                <Link href="/inventory" className="black_btn">INVENTORY</Link>
-                <Link href="/contact" className="black_btn">CONTACT</Link>
+                <Link href="/Home" className="home_btn">HOME</Link>
+                <Link href="/About" className="home_btn">ABOUT</Link>
+                <Link href="/gallery" className="home_btn">GALLERY</Link>
+                <Link href="/amentities" className="home_btn">AMENITIES</Link>
+                <Link href="/inventory" className="home_btn">INVENTORY</Link>
+                <Link href="/contact" className="home_btn">CONTACT</Link>
             </div>
 
             {/* Sign In/Sign Out */}
@@ -53,15 +53,15 @@ const Nav = () => {
                     <button
                         type="button"
                         // onClick={signOut}
-                        className="outline_btn"
+                        className="outline_home_btn"
                     >
                         Sign Out
                     </button>
                 ) : (
                     <button
                         type="button"
-                        // onClick={signOut}
-                        className="outline_btn"
+                        href="/login"
+                        className="outline_home_btn"
                     >
                         Sign In
                     </button>
@@ -76,7 +76,6 @@ const Nav = () => {
                 <span className="material-icons">menu</span>
                 {/* Replace with your mobile menu icon */}
             </button>
-
             {/* Mobile Menu Dropdown */}
             {isMenuOpen && (
                 <div className="fixed top-0 right-0 bottom-0 left-0 bg-white shadow-lg z-50 flex flex-col items-center py-4 space-y-4 sm:hidden">
@@ -90,15 +89,15 @@ const Nav = () => {
                         <button
                             type="button"
                             // onClick={signOut}
-                            className="outline_btn"
+                            className="outline_home_btn"
                         >
                             Sign Out
                         </button>
                     ) : (
                         <button
                             type="button"
-                            // onClick={signOut}
-                            className="outline_btn"
+                            href="/login"
+                            className="outline_home_btn"
                         >
                             Sign In
                         </button>
