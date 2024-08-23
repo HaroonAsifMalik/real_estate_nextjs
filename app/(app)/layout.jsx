@@ -7,18 +7,18 @@ export const metadata = {
     description: "Promtopia is a platform for creating and sharing promposals"
 }
 
+
 const RootLayout = ({ children }) => {
     return (
         <html lang='en'>
-            <body>
-                <div className='main'>
-                    <div className='gradient' />
-                </div>
-                <main className='app'>
+              <body className="bg-[#f9f9f9] opacity-100 bg-[radial-gradient(#08ff00_1.3px,transparent_1.3px),radial-gradient(#08ff00_1.3px,#f9f9f9_1.3px)] bg-[length:52px_52px] bg-[position:0_0,26px_26px]">
+                <div className="min-h-screen flex flex-col">
                     <Nav />
-                    {children}
-                    <Footer/>
-                </main>
+                    <main className="flex-grow">
+                        {children}
+                    </main>
+                    <Footer />
+                </div>
             </body>
         </html>
     )

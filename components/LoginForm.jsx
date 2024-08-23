@@ -26,9 +26,6 @@ const SignUpForm = () => {
             }
         }
     };
-
-
-
     return (
         <>
             <h4 className="block font-sans text-2xl font-semibold leading-snug text-white tracking-normal text-blue-gray-900 antialiased">

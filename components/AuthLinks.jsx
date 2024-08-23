@@ -9,7 +9,7 @@ const AuthLinks = () => (
       </a>
     </Link>
     <div className="text-center mt-4">
-      Don't have an account? 
+      Don't have an account?
       <Link href="/signup">
         <a className="text-blue-500 font-bold">Sign Up</a>
       </Link>

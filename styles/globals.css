@@ -44,6 +44,25 @@
 
 }
 
+/* Keyframes for rotate and scale effect */
+@keyframes rotate-scale {
+  0% { transform: rotate(-180deg) scale(0.9); opacity: 0; }
+  100% { transform: rotate(0deg) scale(1); opacity: 1; }
+}
+
+/* Default state */
+.gallery-item {
+  opacity: 0;
+  transform: rotate(-20deg) scale(0.9);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animation when in view */
+.gallery-item.in-view {
+  opacity: 1;
+  animation: rotate-scale 0.6s ease-out forwards;
+}
+
 .main:before {
   background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
   position: absolute;
