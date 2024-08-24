@@ -6,18 +6,15 @@ import GetInTouch from '@components/GetInTouch'
 import Amenities from '@components/Amenities'
 
 
-
 const Main = () => {
     return (
         <>
             <Home />
             <About />
             <Gallery />
-            <Inventory/>
-            <GetInTouch/>
-           
-      <Amenities />
-    
+            <Inventory />
+            <Amenities />
+            <GetInTouch />
         </>
     )
 }
