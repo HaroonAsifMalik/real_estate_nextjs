@@ -14,6 +14,10 @@ const SignUpForm = () => {
             setError("Passwords do not match");
         }
         else {
+
+
+            console.log(email,confirmPassword, password)
+
             try {
                 await signIn('credentials', {
                     redirect: false,

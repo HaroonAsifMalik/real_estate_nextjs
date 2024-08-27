@@ -1,4 +1,9 @@
-"use client"; // because we are using useEffect or useState
+"use client";
+
+import Logo from "@components/Logo/Logo";
+import NavigationLinks from "@components/Link/Link";
+import Button from "@components/Button/Button";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -6,9 +11,9 @@ import { useState } from "react";
 // import { signOut, useSession, getProvider } from "next_auth/react";
 
 const Nav = () => {
-    const isUserLogin = false;
     // const { data: session } = useSession();
-    const [providers, setproviders] = useState(null);
+
+    const isUserLogin = true;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     // useEffect(() => {
@@ -49,59 +54,38 @@ const Nav = () => {
 
             {/* Sign In/Sign Out */}
             <div className="hidden sm:flex items-center space-x-4">
-                {isUserLogin ? (
-                    <button
-                        type="button"
-                        // onClick={signOut}
-                        className="outline_home_btn"
-                    >
-                        Sign Out
-                    </button>
-                ) : (
-                    <button
-                        type="button"
-                        href="/login"
-                        className="outline_home_btn"
-                    >
-                        Sign In
-                    </button>
-                )}
+                <Button
+                    href={!isUserLogin ? "/login" : undefined}
+                    onClick={isUserLogin ? () => signOut() : undefined}
+                    className="outline_home_btn"
+                >
+                    {isUserLogin ? "Sign Out" : "Sign In"}
+                </Button>
             </div>
             
             {/* Mobile Menu Button */}
-            <button
-                className="sm:hidden flex items-center space-x-2"
+            <Button
                 onClick={toggleMenu}
+                className="sm:hidden flex items-center space-x-2"
             >
                 <span className="material-icons">menu</span>
                 {/* Replace with your mobile menu icon */}
-            </button>
+            </Button>
             {/* Mobile Menu Dropdown */}
             {isMenuOpen && (
                 <div className="fixed top-0 right-0 bottom-0 left-0 bg-white shadow-lg z-50 flex flex-col items-center py-4 space-y-4 sm:hidden">
-                    <Link href="/Home" className="black_btn">HOME</Link>
-                    <Link href="/About" className="black_btn">ABOUT</Link>
-                    <Link href="/gallery" className="black_btn">GALLERY</Link>
-                    <Link href="/amentities" className="black_btn">AMENITIES</Link>
-                    <Link href="/inventory" className="black_btn">INVENTORY</Link>
-                    <Link href="/contact" className="black_btn">CONTACT</Link>
-                    {isUserLogin ? (
-                        <button
-                            type="button"
-                            // onClick={signOut}
-                            className="outline_home_btn"
-                        >
-                            Sign Out
-                        </button>
-                    ) : (
-                        <button
-                            type="button"
-                            href="/login"
-                            className="outline_home_btn"
-                        >
-                            Sign In
-                        </button>
-                    )}
+                    <NavigationLinks
+                        links={links}
+                        linkClass="black_btn"
+                        onLinkClick={toggleMenu}
+                    />
+                    <Button
+                        href={!isUserLogin ? "/login" : undefined}
+                        onClick={isUserLogin ? () => signOut() : undefined}
+                        className="outline_home_btn"
+                    >
+                        {isUserLogin ? "Sign Out" : "Sign In"}
+                    </Button>
                 </div>
             )}
         </nav>
